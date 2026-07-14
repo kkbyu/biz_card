@@ -447,6 +447,23 @@
         font-family: var(--serif);
       }
 
+      .event-list-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border: 1px solid rgba(80, 103, 77, 0.26);
+        border-radius: 999px;
+        text-decoration: none;
+        transition: color 180ms ease, background 180ms ease;
+      }
+
+      .event-list-link:hover,
+      .event-list-link:focus-visible {
+        color: #fff;
+        background: var(--green-dark);
+      }
+
       .footer {
         position: relative;
         overflow: hidden;
@@ -701,6 +718,16 @@
               で制作しました。
             </p>
             <p>いろんな勉強会をしてますので、気軽にご参加ください！</p>
+            <p>
+              <a
+                class="event-list-link"
+                href="https://weeyble.com/event"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                イベント一覧はこちら <span aria-hidden="true">↗</span>
+              </a>
+            </p>
           </aside>
         </section>
       </div>
