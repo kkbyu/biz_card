@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="kkbyuのデジタルビジネスカード。テクノロジーと事業をつなぎ、仕組みで未来をつくる。"
+      content="投資家、エンジニア、会社経営、ニートとして活動するkkbyuのデジタルビジネスカード。"
     />
     <meta name="theme-color" content="#f7f4ec" />
     <title>kkbyu | Digital Business Card</title>
@@ -155,18 +155,33 @@
         line-height: 0.9;
       }
 
-      .hero-mark {
-        width: 46px;
-        height: 2px;
-        margin: 42px auto 28px;
-        background: var(--green);
+      .roles {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        margin: 42px 0 0;
+        padding: 0;
+        color: var(--green-dark);
+        font-family: var(--serif);
+        font-size: clamp(0.92rem, 2.5vw, 1.2rem);
+        letter-spacing: 0.1em;
+        list-style: none;
       }
 
-      .lead {
-        margin: 0;
-        font-family: var(--serif);
-        font-size: clamp(1rem, 2.8vw, 1.45rem);
-        letter-spacing: 0.07em;
+      .roles li {
+        display: flex;
+        align-items: center;
+      }
+
+      .roles li:not(:last-child)::after {
+        width: 3px;
+        height: 3px;
+        margin: 0 16px;
+        border-radius: 50%;
+        background: var(--gold);
+        content: "";
       }
 
       .intro {
@@ -443,6 +458,16 @@
           letter-spacing: 0.26em;
         }
 
+        .roles {
+          max-width: 320px;
+          margin-inline: auto;
+          row-gap: 8px;
+        }
+
+        .roles li:not(:last-child)::after {
+          margin-inline: 10px;
+        }
+
         .intro {
           margin-bottom: 68px;
           border-radius: 22px;
@@ -513,8 +538,12 @@
         <div class="shell">
           <p class="eyebrow">DIGITAL BUSINESS CARD</p>
           <h1 id="page-title">kkbyu</h1>
-          <div class="hero-mark" aria-hidden="true"></div>
-          <p class="lead">テクノロジーと事業をつなぎ、仕組みで未来をつくる。</p>
+          <ul class="roles" aria-label="肩書">
+            <li>投資家</li>
+            <li>エンジニア</li>
+            <li>会社経営</li>
+            <li>ニート</li>
+          </ul>
         </div>
       </section>
 
