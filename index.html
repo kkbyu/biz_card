@@ -409,6 +409,44 @@
         font-size: 1.2rem;
       }
 
+      .event-note {
+        margin-top: 24px;
+        padding: clamp(26px, 5vw, 42px);
+        border: 1px solid rgba(117, 133, 106, 0.18);
+        border-radius: 24px;
+        background: rgba(237, 241, 231, 0.68);
+        text-align: center;
+      }
+
+      .event-note-label {
+        margin: 0 0 12px;
+        color: var(--green);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.24em;
+      }
+
+      .event-note p {
+        max-width: 720px;
+        margin: 0 auto;
+        color: #505a51;
+      }
+
+      .event-note p + p {
+        margin-top: 18px;
+      }
+
+      .event-note a {
+        color: var(--green-dark);
+        font-weight: 700;
+        text-decoration-color: rgba(80, 103, 77, 0.4);
+        text-underline-offset: 4px;
+      }
+
+      .event-title {
+        font-family: var(--serif);
+      }
+
       .footer {
         position: relative;
         overflow: hidden;
@@ -507,6 +545,11 @@
 
         .social-link {
           border-radius: 20px;
+        }
+
+        .event-note {
+          border-radius: 20px;
+          text-align: left;
         }
       }
 
@@ -648,6 +691,17 @@
               <span class="external-arrow" aria-hidden="true">↗</span>
             </a>
           </div>
+          <aside class="event-note" aria-labelledby="event-note-title">
+            <p class="event-note-label" id="event-note-title">ABOUT THIS CARD</p>
+            <p>
+              このデジタル名刺は
+              <a href="https://weeyble.com/" target="_blank" rel="noopener noreferrer">コワーキングスペース秋葉原</a>
+              の勉強会<br />
+              <span class="event-title">「AI駆動開発入門！バイブコーディングで作るデジタル名刺ハンズオン」</span>
+              で制作しました。
+            </p>
+            <p>いろんな勉強会をしてますので、気軽にご参加ください！</p>
+          </aside>
         </section>
       </div>
     </main>
