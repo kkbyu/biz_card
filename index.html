@@ -97,6 +97,11 @@
         text-decoration: none;
       }
 
+      .nav-links {
+        display: flex;
+        gap: 22px;
+      }
+
       .hero {
         position: relative;
         display: grid;
@@ -203,7 +208,7 @@
       }
 
       .works {
-        padding-bottom: 130px;
+        padding-bottom: 96px;
       }
 
       .work-list {
@@ -299,6 +304,96 @@
         line-height: 1.4;
       }
 
+      .company-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .company-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 9px 14px;
+        border-radius: 999px;
+        color: var(--green-dark);
+        background: rgba(221, 229, 215, 0.62);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        transition: color 180ms ease, background 180ms ease;
+      }
+
+      .company-link:hover,
+      .company-link:focus-visible {
+        color: #fff;
+        background: var(--green-dark);
+      }
+
+      .connect {
+        padding-bottom: 70px;
+      }
+
+      .social-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .social-link {
+        display: grid;
+        grid-template-columns: 58px 1fr auto;
+        align-items: center;
+        gap: 18px;
+        min-height: 96px;
+        padding: 18px 24px;
+        border: 1px solid rgba(255, 255, 255, 0.86);
+        border-radius: 24px;
+        background: var(--paper);
+        box-shadow: var(--shadow);
+        text-decoration: none;
+        transition: transform 220ms ease, box-shadow 220ms ease;
+      }
+
+      .social-link:hover,
+      .social-link:focus-visible {
+        box-shadow: 0 22px 48px rgba(69, 75, 61, 0.15);
+        transform: translateY(-3px);
+      }
+
+      .social-mark {
+        display: grid;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        color: var(--green-dark);
+        background: linear-gradient(145deg, #f9f8f2, #e4e9dd);
+        font-family: Georgia, serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        place-items: center;
+      }
+
+      .social-name {
+        display: block;
+        font-family: var(--serif);
+        font-size: 1.18rem;
+      }
+
+      .social-handle {
+        display: block;
+        color: var(--muted);
+        font-size: 0.75rem;
+        letter-spacing: 0.06em;
+      }
+
+      .external-arrow {
+        color: var(--green);
+        font-size: 1.2rem;
+      }
+
       .footer {
         position: relative;
         overflow: hidden;
@@ -376,6 +471,18 @@
           grid-column: 1 / -1;
           margin-top: 18px;
         }
+
+        .company-links {
+          grid-column: 1 / -1;
+        }
+
+        .social-list {
+          grid-template-columns: 1fr;
+        }
+
+        .social-link {
+          border-radius: 20px;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -383,7 +490,8 @@
           scroll-behavior: auto;
         }
 
-        .work-card {
+        .work-card,
+        .social-link {
           transition: none;
         }
       }
@@ -393,7 +501,10 @@
     <header class="site-header">
       <nav class="nav shell" aria-label="メインナビゲーション">
         <a class="brand" href="#top" aria-label="ページ先頭へ">kkbyu</a>
-        <a class="nav-link" href="#work">WORK</a>
+        <div class="nav-links">
+          <a class="nav-link" href="#work">WORK</a>
+          <a class="nav-link" href="#connect">CONNECT</a>
+        </div>
       </nav>
     </header>
 
@@ -434,6 +545,14 @@
                   <li>データ活用基盤</li>
                   <li>フリーランス支援</li>
                 </ul>
+                <div class="company-links">
+                  <a class="company-link" href="https://weeybrid.co.jp/" target="_blank" rel="noopener noreferrer">
+                    公式サイト <span aria-hidden="true">↗</span>
+                  </a>
+                  <a class="company-link" href="https://x.com/weeybrid" target="_blank" rel="noopener noreferrer">
+                    X @weeybrid <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
               </div>
             </article>
 
@@ -447,6 +566,11 @@
                   <li>システム開発・PR支援</li>
                   <li>AIO支援</li>
                 </ul>
+                <div class="company-links">
+                  <a class="company-link" href="https://chrophy.com/" target="_blank" rel="noopener noreferrer">
+                    公式サイト <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
               </div>
             </article>
 
@@ -460,8 +584,40 @@
                   <li>システム開発・コンサルティング</li>
                   <li>スマートフォン向けアプリケーションの企画・制作</li>
                 </ul>
+                <div class="company-links">
+                  <a class="company-link" href="https://alpine-digital-rise.co.jp/" target="_blank" rel="noopener noreferrer">
+                    公式サイト <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
               </div>
             </article>
+          </div>
+        </section>
+
+        <section class="connect" id="connect" aria-labelledby="connect-title">
+          <h2 class="section-heading" id="connect-title">CONNECT</h2>
+          <div class="social-list">
+            <a class="social-link" href="https://x.com/kkbyu/" target="_blank" rel="noopener noreferrer">
+              <span class="social-mark" aria-hidden="true">𝕏</span>
+              <span>
+                <span class="social-name">X</span>
+                <span class="social-handle">@kkbyu</span>
+              </span>
+              <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="social-link"
+              href="https://www.facebook.com/kokubo777"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="social-mark" aria-hidden="true">f</span>
+              <span>
+                <span class="social-name">Facebook</span>
+                <span class="social-handle">kokubo777</span>
+              </span>
+              <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
           </div>
         </section>
       </div>
